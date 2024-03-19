@@ -52,7 +52,7 @@ export default function App() {
 
         }
 
-        console.log("IndexPage=", store.getState());
+        console.log("APP=", store.getState());
     }, []);
 
     return (
