@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import {
+  Outlet,
   useNavigate
 } from "react-router-dom";
 import NavBar from '../container/nav-bar-container';
@@ -17,8 +18,10 @@ function RequireAuthFunct(props) {
   }, [props]);
 
   return (
-
-    <NavBar />
+    <>
+      <Outlet />
+      <NavBar />
+    </>
 
   );
 }

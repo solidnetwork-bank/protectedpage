@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import { Outlet } from "react-router-dom";
 import AppPage from '../investments/route/AppPage';
 
 
@@ -19,10 +18,7 @@ export default class InvestmentLayout extends Component {
 
   render() {
     return (
-
-      <AppPage>
-        <Outlet />
-      </AppPage>
+      <AppPage />
     );
   }
 }
