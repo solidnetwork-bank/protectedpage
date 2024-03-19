@@ -1,0 +1,77 @@
+.menu-icon-container {
+    cursor: pointer;
+    width: auto;
+}
+
+.menu-icon-bar1,
+.menu-icon-bar2,
+.menu-icon-bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: #1c1c1c;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+.menu-icon-change .menu-icon-bar1 {
+    opacity: 0;
+}
+
+
+.menu-icon-change .menu-icon-bar2 {
+    opacity: 0;
+}
+
+
+.menu-icon-change .menu-icon-bar3 {
+    opacity: 0;
+}
+
+.menu-icon-change {
+    cursor: pointer;
+    width: auto;
+}
+
+.menu-close,
+.menu-open {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+.menu-item {
+    display: block;
+    font-family: "AvenirNextLTW01-Medium";
+    font-weight: 700;
+    color: #b8b7ad;
+    margin-bottom: 26px;
+}
+
+.menu-close {
+    display: none;
+}
+
+.menu-open {
+    display: flex;
+    flex-flow: column;
+    width: 220px;
+    padding: 20px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+}
+
+.cross-button {
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-family: "Maison Neue Bold";
+    color: #bdc3c7;
+}

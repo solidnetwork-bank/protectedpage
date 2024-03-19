@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Maison Neue Light';
+    src: url('../fonts/maisonneue-light-webfont.woff');
+}
+
+
+
+.text-row-content-text {
+    font-family: "Maison Neue Light";
+    font-size: 14px;
+    padding: 7px 0;
+}

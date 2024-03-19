@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "AvenirNextLTW01-Regular";
+    src: url("../fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot");
+    src: url("../fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot") format("eot"),
+        url("../fonts/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2") format("woff2"),
+        url("../fonts/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff"),
+        url("../fonts/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf") format("truetype"),
+        url("../fonts/52a192b1-bea5-4b48-879f-107f009b666f.svg") format("svg");
+}
+
+@font-face {
+    font-family: 'Maison Neue Demi';
+    src: url('../fonts/MaisonNeue-Demi.otf');
+}
+
+
+.main-header {
+    padding-top: 3.3rem;
+}
+
+.header-page {
+    font-family: "AvenirNextLTW01-Regular";
+    font-weight: normal;
+    font-style: normal;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto 1fr;
+    font-size: 0.778rem;
+    line-height: 0.778rem;
+    letter-spacing: 0.056rem;
+}
+
+.header-name {
+    font-family: "Maison Neue Demi";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.778rem;
+    line-height: 0.778rem;
+    letter-spacing: 0.056rem;
+    padding-top: 11px;
+}
+
+.header-line {
+    background: #000;
+    height: 2px;
+    margin-top: 4px;
+    opacity: .15;
+}
+
+.big-heading {
+    padding-top: 2.8rem;
+    font-size: clamp(2.2rem, 9vw, 5.5rem) !important;
+    line-height: 96% !important;
+    letter-spacing: -0.13888888888889rem !important;
+}
+
+.main-header-menu {
+    display: flex;
+    justify-content: space-between;
+}

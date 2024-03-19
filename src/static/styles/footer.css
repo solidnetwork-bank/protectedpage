@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Maison Neue Light';
+    src: url('../fonts/maisonneue-light-webfont.woff');
+}
+
+
+.main-footer {
+    padding: 1.25em 0 3em 0;
+}
+
+.last-update {
+    font-size: 11px;
+    font-family: "Maison Neue Light";
+}
+
+.footer-share {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 380px;
+}
+
+.logo-anchor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo-image {
+    width: clamp(90px, 20%, 150px);
+}
+
+

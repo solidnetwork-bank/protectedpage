@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'sohne';
+    src: url('../fonts/sohne-700-normal.woff') format('woff');
+}
+
+.main-section {
+    padding-top: 3.4rem;
+}
+
+.main-section-heading {
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: sohne;
+    letter-spacing: 0.083em;
+    text-transform: uppercase;
+}

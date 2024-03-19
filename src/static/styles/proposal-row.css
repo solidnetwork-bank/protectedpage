@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Maison Neue Bold';
+    src: url('../fonts/MaisonNeue-Bold.otf');
+}
+
+.content-heading {
+    letter-spacing: 0px;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: "Maison Neue Bold";
+    font-weight: bolder;
+    margin-top: 23px;
+}

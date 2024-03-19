@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.ttf");
+}
+
+@font-face {
+    font-family: "Font Awesome 6 Brands";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fa-brands-400.ttf") format("truetype");
+
+}
+
+.footer-social-option {
+    font-size: 22px;
+    list-style: none;
+}
+
+.footer-social-option-link {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+[class*=" icon-"],
+[class^="icon-"] {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: icomoon !important;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icon-social_facebook::before {
+    content: "\e911";
+}
+
+.icon-social_twitter::before {
+    content: "\e915";
+}
+
+
+.icon-social_instagram::before {
+    content: "\e912";
+}
+
+
+.icon-social_youtube::before {
+    content: "\e916";
+}
+
+
+.icon-social_tiktok::before {
+    font-family: "Font Awesome 6 Brands";
+    content: "\e07b";
+    font-size: 20px;
+}
+

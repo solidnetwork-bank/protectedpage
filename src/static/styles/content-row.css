@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "AvenirNextLTW01-Medium";
+    src: url("../fonts/1a7c9181-cd24-4943-a9d9-d033189524e0.eot");
+    src: url("../fonts/1a7c9181-cd24-4943-a9d9-d033189524e0.eot") format("eot"),
+        url("../fonts/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff2") format("woff2"),
+        url("../fonts/f26faddb-86cc-4477-a253-1e1287684336.woff") format("woff"),
+        url("../fonts/63a74598-733c-4d0c-bd91-b01bffcd6e69.ttf") format("truetype"),
+        url("../fonts/a89d6ad1-a04f-4a8f-b140-e55478dbea80.svg") format("svg");
+}
+
+@font-face {
+    font-family: 'Maison Neue Bold';
+    src: url('../fonts/MaisonNeue-Bold.otf');
+}
+
+.content-row {
+    margin-bottom: 16px;
+}
+
+.content-author {
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+.author-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.author-img {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.author-name {
+    vertical-align: middle;
+    margin-left: 8px;
+    font-family: "AvenirNextLTW01-Medium";
+    font-size: 14px;
+}
+
+.link-anchor {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link-heading {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0px;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: "Maison Neue Bold";
+}
+
+.content-date {
+    font-size: 13px;
+    font-family: "Maison Neue Light";
+}
