@@ -1,12 +1,13 @@
 import {
-  React,
-  Component
+  Component,
+  React
 } from 'react';
+
 import '../static/styles/layout.css';
 import MainContainer from './MainContainer';
 
 
-export default class Layout extends Component {
+export default class HomeLayout extends Component {
 
   render() {
 
@@ -14,6 +15,8 @@ export default class Layout extends Component {
       <div className='content-holder'>
         <MainContainer />
       </div>
+
+
     );
 
   }

@@ -4,7 +4,7 @@ import {
 } from 'react';
 import '../static/styles/home.css';
 import ContentRow from '../components/ContentRow';
-import store from '../model/store';
+import storeNoRedux from '../model/store-no-redux';
 
 
 export default class Home extends Component {
@@ -20,7 +20,7 @@ export default class Home extends Component {
                 <div className='home-page-content'>
 
                     {
-                        store.news.map((dataRow) =>
+                        storeNoRedux.news.map((dataRow) =>
                             <ContentRow
                                 key={dataRow.idx}
                                 author={dataRow.author}
