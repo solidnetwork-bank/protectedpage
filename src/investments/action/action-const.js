@@ -10,12 +10,12 @@ export const SET_USER_IMAGE = 'SET_USER_IMAGE';
 
 /* NAV PATH */
 export const RENTAL_NAV_PATH = '/';
-export const SEARCH_NAV_PATH = '/search';
-export const INVESTMENT_NAV_PATH = '/invest';
-export const SETTINGS_NAV_PATH = '/settings';
-export const LOGOUT_NAV_PATH = '/logout';
-export const LOGIN_NAV_PATH = '/login';
-export const BASENAME_PATH = '/investment';
+export const SEARCH_NAV_PATH = 'search';
+export const INVESTMENT_NAV_PATH = 'invest';
+export const SETTINGS_NAV_PATH = 'settings';
+export const LOGOUT_NAV_PATH = 'logout';
+export const LOGIN_NAV_PATH = 'login-2';
+export const BASENAME_PATH = 'investment';
 
 /* RENTAL */
 export const SET_RENTAL_INCOME = 'SET_RENTAL_INCOME';

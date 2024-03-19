@@ -22,20 +22,9 @@ import Search from './Search';
 export default class AppPage extends Component {
   render() {
     return (
-      <div>
-        <BrowserRouter basename={BASENAME_PATH} >
-          <Routes>
-            <Route exact path={LOGIN_NAV_PATH} element={<LoginPage />} />
-            <Route element={<RequireAuthFunct />}>
-              <Route exact path={RENTAL_NAV_PATH} element={<MyRentalROI />} />
-              <Route exact path={SETTINGS_NAV_PATH} element={<MySettings />} />
-              <Route exact path={INVESTMENT_NAV_PATH} element={<MyInvestments />} />
-              <Route exact path={SEARCH_NAV_PATH} element={<Search />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </div>
+      <RequireAuthFunct />
     );
   }
 }
 
+ 
