@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import {
   INVESTMENT_NAV_PATH,
   LOGOUT_NAV_PATH,
-  RENTAL_NAV_PATH,
   SEARCH_NAV_PATH,
   SETTINGS_NAV_PATH
 } from '../action/action-const';
