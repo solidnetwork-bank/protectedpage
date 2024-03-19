@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import {
   INVESTMENT_NAV_PATH,
   LOGOUT_NAV_PATH,
-  RENTAL_NAV_PATH,
   SEARCH_NAV_PATH,
   SETTINGS_NAV_PATH
 } from '../action/action-const';
@@ -41,7 +40,7 @@ function NavBar(props) {
       <nav className="navbar">
         <div className="row">
           <div className="col">
-            <Link onClick={onClick} to={RENTAL_NAV_PATH}>
+            <Link onClick={onClick} to="roi">
               <div className={
                 (activeTabClassName === 'rental-icon')
                   ? 'rental-icon active' : 'rental-icon'

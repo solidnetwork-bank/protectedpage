@@ -5,7 +5,7 @@ import {
 import '../static/styles/footer.css';
 import FooterOption from './FooterOption';
 import Logo from '../static/images/logo.png';
-import store from '../model/store';
+import storeNoRedux from '../model/store-no-redux';
 
 
 export default class Footer extends Component {
@@ -15,7 +15,7 @@ export default class Footer extends Component {
         return (
 
             <footer className="main-footer">
-                <p className='last-update'>{store.footer.lastUpdate}</p>
+                <p className='last-update'>{storeNoRedux.footer.lastUpdate}</p>
                 <ul className="footer-share">
 
                     {results}
