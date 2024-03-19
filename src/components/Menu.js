@@ -36,6 +36,7 @@ export default function Menu() {
                 <a className="menu-item" href={EDITORIAL_PATH}>{EDITORIAL_HEADING}</a>
                 <a className="menu-item" href={VIRTUAL_CREDIT_CARD_PATH}>{VIRTUAL_CREDIT_CARD_HEADING}</a>
                 <a className="menu-item" href={STATEMENT_PATH}>{STATEMENT_HEADING}</a>
+                <a className="menu-item" href="/investment">Investments</a>
             </div>
         </nav>
     );
