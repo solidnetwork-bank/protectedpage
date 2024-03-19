@@ -1,27 +1,20 @@
 import {
-  React,
-  Component
+  Component,
+  React
 } from 'react';
+import { Outlet } from "react-router-dom";
 import '../static/styles/layout.css';
 import MainContainer from './MainContainer';
-import { Outlet } from "react-router-dom";
 
 
-export default class Layout extends Component {
-
-  /*
-  <>
-<NavBar />
-<Outlet />
-</>
-*/
+export default class HomeLayout extends Component {
 
   render() {
 
     return (
       <div className='content-holder'>
         <MainContainer >
-        <Outlet />
+          <Outlet />
         </MainContainer >
       </div>
 
