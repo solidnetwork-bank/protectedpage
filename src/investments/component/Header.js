@@ -21,19 +21,19 @@ export default function Header(props) {
     let headerTitle;
     let iconClass;
     switch (pathname) {
-      case RENTAL_NAV_PATH:
+      case "/investment/roi":
         headerTitle = "ROI";
         iconClass = "rental-icon active";
         break;
-      case SEARCH_NAV_PATH:
+      case "/investment/search":
         headerTitle = "Search";
         iconClass = "search-icon active";
         break;
-      case INVESTMENT_NAV_PATH:
+      case "/investment/invest":
         headerTitle = "Investment";
         iconClass = "invest-icon active";
         break;
-      case SETTINGS_NAV_PATH:
+      case "/investment/settings":
         headerTitle = "Settings";
         iconClass = "settings-icon active";
         break;
