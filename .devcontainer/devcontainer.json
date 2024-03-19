@@ -1,4 +1,24 @@
 {
     "image": "mcr.microsoft.com/devcontainers/universal:2",
-    "onCreateCommand": "git config --global user.name ${GITHUB_USER}"
-}
+    "waitFor": "onCreateCommand",
+    "onCreateCommand": "git config --global user.name ${GITHUB_USER}",
+    "updateContentCommand": "npm install",
+    "postCreateCommand": "",
+    "postAttachCommand": {
+      "server": "npm start"
+    },
+    "customizations": {
+      "codespaces": {
+        "openFiles": [
+          "src/index.js"
+        ]
+      }
+    },
+    "portsAttributes": {
+      "3000": {
+        "label": "Application",
+        "onAutoForward": "openPreview"
+      }
+    },
+    "forwardPorts": [3000]
+  }
