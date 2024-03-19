@@ -2,7 +2,7 @@ import {
   Component,
   React
 } from 'react';
-import { Outlet } from "react-router-dom";
+
 import '../static/styles/layout.css';
 import MainContainer from './MainContainer';
 
@@ -13,9 +13,7 @@ export default class HomeLayout extends Component {
 
     return (
       <div className='content-holder'>
-        <MainContainer >
-          <Outlet />
-        </MainContainer >
+        <MainContainer />
       </div>
 
 
