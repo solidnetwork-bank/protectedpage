@@ -56,7 +56,7 @@ export const logout = (state) => {
     localStorage.removeItem(AUTH_TOKEN_LOCAL_NAME);
     setAuthToken(false);
     dispatch(setUser({}));
-    state.navigate(LOGIN_NAV_PATH);
+    state.navigate(/*LOGIN_NAV_PATH*/ "/");
   }
 }
 
@@ -88,7 +88,7 @@ export const goHome = (state) => {
   return dispatch => {
     console.log("goHome=", state);
     if (state.user.auth) {
-      state.navigate(RENTAL_NAV_PATH);
+      state.navigate(RENTAL_NAV_PATH+"investment/roi");
     }
   };
 }
@@ -97,7 +97,7 @@ export const requiredAuth = (state) => {
   return dispatch => {
     console.log("requiredAuth=", state);
     if (!state.user.auth) {
-      state.navigate(LOGIN_NAV_PATH);
+      state.navigate("/"+LOGIN_NAV_PATH);
     }
   };
 }

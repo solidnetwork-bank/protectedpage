@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './static/styles/index.css';
-import Layout from './components/Layout';
 import reportWebVitals from './reportWebVitals';
-import IndexPage from './invesments/route/IndexPage';
+import App from "./components/App.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-//const IndexComponent =  <Layout />;
-const IndexComponent =   <IndexPage />;
+
 root.render(
   <React.StrictMode>    
-    {IndexComponent} 
+    <App />
   </React.StrictMode>
 );
 

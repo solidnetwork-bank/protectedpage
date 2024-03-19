@@ -5,7 +5,7 @@ import {
     LAST_UPDATE
 } from './store-const';
 
-const store = {
+const storeNoRedux = {
     footer: {
         lastUpdate: LAST_UPDATE
     },
@@ -14,4 +14,4 @@ const store = {
     editorial: getEditorial()
 }
 
-export default store;
+export default storeNoRedux;

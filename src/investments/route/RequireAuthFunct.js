@@ -18,10 +18,9 @@ function RequireAuthFunct(props) {
   }, [props]);
 
   return (
-    <>
+   
       <NavBar />
-      <Outlet />
-    </>
+     
   );
 }
 

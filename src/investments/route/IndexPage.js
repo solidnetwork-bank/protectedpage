@@ -1,6 +1,8 @@
-import { jwtDecode } from 'jwt-decode';
+
 import React, { Component } from 'react';
+import { Outlet } from "react-router-dom";
 import { Provider } from 'react-redux';
+import { jwtDecode } from 'jwt-decode';
 import { AUTH_TOKEN_LOCAL_NAME } from '../action/action-const';
 import {
   setAuthToken,
@@ -8,6 +10,7 @@ import {
 } from '../action/user-action';
 import store from '../reducer/store-reducer';
 import AppPage from './AppPage';
+
 
 global.jQuery = require('jquery');
 global.Tether = require('tether');
@@ -23,21 +26,15 @@ require('../style/header.css');
 export default class IndexPage extends Component {
   constructor(props) {
     super(props);
-    let token = localStorage.getItem(AUTH_TOKEN_LOCAL_NAME);
-    if (token) {
-      setAuthToken(token);
-      store.dispatch(setUser(jwtDecode(token).user));
 
-    }
-
-    console.log("IndexPage=", store.getState());
 
   }
   render() {
     return (
-      <Provider store={store}>
-        <AppPage />
-      </Provider>
+    
+        <AppPage>
+        <Outlet />
+        </AppPage>
     );
   }
 }
