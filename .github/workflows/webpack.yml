@@ -2,6 +2,7 @@ name: webpack
 
 env:
   REACT_APP_API_GATEWAY_STAGE: ${{ secrets.API_GATEWAY_STAGE }}
+  REACT_APP_API_GATEWAY_ENDPOINT: ${{ secrets.API_GATEWAY_ENDPOINT }}
 
 on:
   push:
