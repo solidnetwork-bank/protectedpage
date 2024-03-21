@@ -40,26 +40,87 @@ npm test
 npm install axios
 ```
 
-### API and Microservices
+### API, Hosts and Microservices
 
-### Virtual Credit Cards:
-
-- **list-virtual-credit-cards-service:** read-only microservice
-
+### Whole Site (Frontend)
 ```sh
-LIST - 'GET /virtual-credit-cards' - LIST ALL CREDIT CARDS (ACTIVATED STATUS, LAST 4 DIGITS)
+bank.solidnetwork.xyz
+```
+
+### Sign Up, Sign In, Log Out, Forgot username/password
+### Profile, Settings
+- **secure-service:** 
+```sh
+secure.solidnetwork.xyz
 ```
 ```sh
-READ - 'GET /virtual-credit-cards/{id}' - READ A CREDIT CARD (DISPLAY ALL INFORMATION OF A CREDIT CARD)
+'POST /auth/signin' - Sing In (GENERATE JWT TOKEN)
 ```
-- **manage-virtual-credit-cards-service:** connected to a third party service
+```sh
+'GET /profile/{id}' - READ PROFILE INFORMATION
+```
+
+### Transfers: 
+- **transfer-service:** 
+```sh
+transfer.solidnetwork.xyz
+```
+
+### Payments:
+- **payment-service:** 
+```sh
+payment.solidnetwork.xyz
+```
+
+### Investments:
+- **investment-service:** 
+```sh
+investment.solidnetwork.xyz
+```
+
+### Loans:
+- **loan-service:** 
+```sh
+loan.solidnetwork.xyz
+```
+
+### Statements & Documents
+- **statement-service:** 
+```sh
+statement.solidnetwork.xyz
+```
+```sh
+'POST /statement' - (GENERATE PDF STATEMENT)
+```
+
+### Accounts: Joint, Savings, Checking, Cards
+- **account-service:** 
 
 ```sh
-CREATE - 'POST /virtual-credit-cards' - ADD VIRTUAL CREDIT CARD (ASK FOR A NEW CREDIT CARD TO BE CREATED: 3RD PARTY SERVICES)
+account.solidnetwork.xyz
+```
+
+### Transactions, Info about account
+```sh
+'POST /transaction' - (READ ACCOUNT TRANSACTIONS)
+```
+
+### Credit Cards:
+
+- **credit-card-service:** 
+
+```sh
+LIST - 'GET /credit-card' - LIST ALL CREDIT CARDS (ACTIVATED STATUS, LAST 4 DIGITS)
 ```
 ```sh
-UPDATE - 'PUT /virtual-credit-cards/{id}' - UPDATE A CREDIT CARD (UPDATE DYNAMIC CVV)
+READ - 'GET /credit-card/{id}' - READ A CREDIT CARD (DISPLAY ALL INFORMATION OF A CREDIT CARD)
 ```
 ```sh
-DELETE - 'DELETE /virtual-credit-cards/{id}' - REMOVE A CREDIT CARD (UPDATE TO DISACTIVATED STATUS)
+CREATE - 'POST /credit-card' - ADD CREDIT CARD (ASK FOR A NEW CREDIT CARD TO BE CREATED: 3RD PARTY SERVICES)
+```
+```sh
+UPDATE - 'PUT /credit-card/{id}' - UPDATE A CREDIT CARD (UPDATE DYNAMIC CVV)
+```
+```sh
+DELETE - 'DELETE /credit-card/{id}' - REMOVE A CREDIT CARD (UPDATE TO DISACTIVATED STATUS)
 ```
