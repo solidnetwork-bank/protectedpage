@@ -52,8 +52,7 @@ bank.solidnetwork.xyz
 online.solidnetwork.xyz
 ```
 
-### Sign Up, Sign In, Log Out, Forgot username/password
-### Profile, Settings
+### Sign Up, Sign In, Log Out, Forgot username/password, Profile, Settings
 - **secure-service:** 
 ```sh
 secure.solidnetwork.xyz
@@ -62,28 +61,28 @@ secure.solidnetwork.xyz
 'POST /auth/signin' - Sing In (GENERATE JWT TOKEN)
 ```
 ```sh
-'GET /profile/{id}' - READ PROFILE INFORMATION
+'POST /profile' - READ PROFILE INFORMATION
 ```
 
-### Transfers: 
+### Transfers
 - **transfer-service:** 
 ```sh
 transfer.solidnetwork.xyz
 ```
 
-### Payments:
+### Payments
 - **payment-service:** 
 ```sh
 payment.solidnetwork.xyz
 ```
 
-### Investments:
+### Investments: CD
 - **investment-service:** 
 ```sh
 investment.solidnetwork.xyz
 ```
 
-### Loans:
+### Loans
 - **loan-service:** 
 ```sh
 loan.solidnetwork.xyz
@@ -98,34 +97,38 @@ statement.solidnetwork.xyz
 'POST /statement' - (GENERATE PDF STATEMENT)
 ```
 
-### Accounts: Joint, Savings, Checking, Cards
+### Accounts: Joint, Savings, Checking
 - **account-service:** 
 
 ```sh
 account.solidnetwork.xyz
 ```
-
-### Transactions, Info about account
 ```sh
 'POST /transaction' - (READ ACCOUNT TRANSACTIONS)
 ```
+```sh
+'POST /transaction/detail' - (READ TRANSACTION DETAIL)
+```
 
-### Credit Cards:
+### Cards: Debit and Credit
+```sh
+card.solidnetwork.xyz
+```
 
-- **credit-card-service:** 
+- **card-service:** 
 
 ```sh
-LIST - 'GET /credit-card' - LIST ALL CREDIT CARDS (ACTIVATED STATUS, LAST 4 DIGITS)
+LIST - 'POST /card' - LIST ALL CARDS (ACTIVATED STATUS, LAST 4 DIGITS)
 ```
 ```sh
-READ - 'GET /credit-card/{id}' - READ A CREDIT CARD (DISPLAY ALL INFORMATION OF A CREDIT CARD)
+READ - 'POST /card/detail' - READ A CARD (CARD DETAIL)
 ```
 ```sh
-CREATE - 'POST /credit-card' - ADD CREDIT CARD (ASK FOR A NEW CREDIT CARD TO BE CREATED: 3RD PARTY SERVICES)
+CREATE - 'POST /card/request' - RESQUEST A NEW CREDIT CARD (CREDIT CARD ONLY)
 ```
 ```sh
-UPDATE - 'PUT /credit-card/{id}' - UPDATE A CREDIT CARD (UPDATE DYNAMIC CVV)
+UPDATE - 'POST /card/replace' - REPLACE A CARD (DAMAGED OR STOLEN: UPDATE TO DISACTIVATED STATUS)
 ```
 ```sh
-DELETE - 'DELETE /credit-card/{id}' - REMOVE A CREDIT CARD (UPDATE TO DISACTIVATED STATUS)
+UPDATE - 'POST /card/lock' - LOCK AND UNLOCK A CARD
 ```
