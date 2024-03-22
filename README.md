@@ -40,83 +40,123 @@ npm test
 npm install axios
 ```
 
-### API, Hosts and Microservices
+### Hosts, APIs and Microservices
 
 ### Homepage Site (Frontend)
+**Host**:
 ```sh
 bank.solidnetwork.xyz
 ```
 
 ### Protected Site (Frontend)
+**Host**:
 ```sh
 online.solidnetwork.xyz
 ```
 
-### Sign Up, Sign In, Log Out, Forgot username/password, Profile, Settings
-- **secure-service:** 
+### Sign Up. Sign In. Log Out. Forgot username. Forgot password .Profile .Settings.
+**Host**:
 ```sh
 secure.solidnetwork.xyz
 ```
+**Rest Api**:
+- **Secure Rest Api**
+- **Methods**:
 ```sh
 'POST /auth/signin' - Sing In (GENERATE JWT TOKEN)
 ```
 ```sh
 'POST /profile' - READ PROFILE INFORMATION
 ```
+**Microservices:**
+- **secure-service:** 
 
-### Transfers
-- **transfer-service:** 
+### Transfers.
+**Host**:
 ```sh
 transfer.solidnetwork.xyz
 ```
+**Rest Api**:
+- **Transfer Rest Api**
+- **Methods**:
 
-### Payments
-- **payment-service:** 
+**Microservices:**
+- **transfer-service:** 
+
+### Payments.
+**Host**:
 ```sh
 payment.solidnetwork.xyz
 ```
+**Rest Api**:
+- **Payment Rest Api**
+- **Methods**:
 
-### Investments: CD
-- **investment-service:** 
+**Microservices:**
+- **payment-service:** 
+
+### Investment. CD.
+**Host**:
 ```sh
 investment.solidnetwork.xyz
 ```
+**Rest Api**:
+- **Investment Rest Api**
+- **Methods**:
 
-### Loans
-- **loan-service:** 
+**Microservices:**
+- **investment-service:** 
+
+### Loans.
+**Host**:
 ```sh
 loan.solidnetwork.xyz
 ```
+**Rest Api**:
+- **Loan Rest Api**
+- **Methods**:
 
-### Statements & Documents
-- **statement-service:** 
+**Microservices:**
+- **loan-service:** 
+
+### Statements. Documents.
+**Host**:
 ```sh
 statement.solidnetwork.xyz
 ```
+**Rest Api**:
+- **Statement Rest Api**
+- **Methods**:
 ```sh
 'POST /statement' - (GENERATE PDF STATEMENT)
 ```
-
-### Accounts: Joint, Savings, Checking
-- **account-service:** 
-
+**Microservices:**
+- **statement-service:** 
+### Accounts. Joint Account. Savings Account. Checking Account.
+**Host**:
 ```sh
 account.solidnetwork.xyz
 ```
+**Rest Api**:
+- **Account Rest Api**
+- **Methods**:
 ```sh
 'POST /transaction' - (READ ACCOUNT TRANSACTIONS)
 ```
 ```sh
 'POST /transaction/detail' - (READ TRANSACTION DETAIL)
 ```
+**Microservices:**
+- **account-service:** 
 
-### Cards: Debit and Credit
+### Cards. Debit Cards. Credit Cards.
+**Host**:
 ```sh
 card.solidnetwork.xyz
 ```
-
-- **card-service:** 
-
+**Rest Api**:
+- **Card Rest Api**
+- **Methods**:
 ```sh
 LIST - 'POST /card' - LIST ALL CARDS (ACTIVATED STATUS, LAST 4 DIGITS)
 ```
@@ -132,3 +172,5 @@ UPDATE - 'POST /card/replace' - REPLACE A CARD (DAMAGED OR STOLEN: UPDATE TO DIS
 ```sh
 UPDATE - 'POST /card/lock' - LOCK AND UNLOCK A CARD
 ```
+**Microservices:**
+- **card-service** 
