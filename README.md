@@ -42,9 +42,14 @@ npm install axios
 
 ### API, Hosts and Microservices
 
-### Whole Site (Frontend)
+### Homepage Site (Frontend)
 ```sh
 bank.solidnetwork.xyz
+```
+
+### Protected Site (Frontend)
+```sh
+online.solidnetwork.xyz
 ```
 
 ### Sign Up, Sign In, Log Out, Forgot username/password
