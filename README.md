@@ -66,7 +66,16 @@ secure.solidnetwork.xyz
 'POST /auth/signin' - Sing In (GENERATE JWT TOKEN)
 ```
 ```sh
+'POST /auth/singup' - Sing Up
+```
+```sh
+'POST /auth/logout' - Log Out
+```
+```sh
 'POST /profile' - READ PROFILE INFORMATION
+```
+```sh
+'POST /settings' - Settings
 ```
 **Microservices:**
 - **secure-service:** 
@@ -79,7 +88,18 @@ transfer.solidnetwork.xyz
 **Rest Api**:
 - **Transfer Rest Api**
 - **Methods**:
-
+```sh
+'POST /' - LIST ALL TRANSFERS
+```
+```sh
+'POST /self' - BETWEEN MY ACCOUNTS
+```
+```sh
+'POST /wallet' - ZELLE
+```
+```sh
+'POST /wire' - INTERNATIONAL
+```
 **Microservices:**
 - **transfer-service:** 
 
@@ -91,7 +111,12 @@ payment.solidnetwork.xyz
 **Rest Api**:
 - **Payment Rest Api**
 - **Methods**:
-
+```sh
+'POST /' - LIST ALL PAYMENTS
+```
+```sh
+'POST /bill' - Pay Bills
+```
 **Microservices:**
 - **payment-service:** 
 
@@ -103,7 +128,12 @@ investment.solidnetwork.xyz
 **Rest Api**:
 - **Investment Rest Api**
 - **Methods**:
-
+```sh
+'POST /' - LIST ALL INVESTMENTS
+```
+```sh
+'POST /cd' - Certificate of Deposit
+```
 **Microservices:**
 - **investment-service:** 
 
@@ -115,7 +145,15 @@ loan.solidnetwork.xyz
 **Rest Api**:
 - **Loan Rest Api**
 - **Methods**:
-
+```sh
+'POST /' - LIST ALL LOANS
+```
+```sh
+'POST /home' - Mortgage
+```
+```sh
+'POST /auto' - Car Loans
+```
 **Microservices:**
 - **loan-service:** 
 
@@ -128,7 +166,10 @@ statement.solidnetwork.xyz
 - **Statement Rest Api**
 - **Methods**:
 ```sh
-'POST /statement' - (GENERATE PDF STATEMENT)
+'POST /' - LIST ALL STATEMENTS
+```
+```sh
+'POST /generate' - (GENERATE PDF STATEMENT)
 ```
 **Microservices:**
 - **statement-service:** 
@@ -140,6 +181,9 @@ account.solidnetwork.xyz
 **Rest Api**:
 - **Account Rest Api**
 - **Methods**:
+```sh
+'POST /' - (LIST ALL ACCOUNTS)
+```
 ```sh
 'POST /transaction' - (READ ACCOUNT TRANSACTIONS)
 ```
@@ -158,19 +202,19 @@ card.solidnetwork.xyz
 - **Card Rest Api**
 - **Methods**:
 ```sh
-LIST - 'POST /card' - LIST ALL CARDS (ACTIVATED STATUS, LAST 4 DIGITS)
+'POST /' - LIST ALL CARDS (ACTIVATED STATUS, LAST 4 DIGITS)
 ```
 ```sh
-READ - 'POST /card/detail' - READ A CARD (CARD DETAIL)
+'POST /detail' - READ A CARD (CARD DETAIL)
 ```
 ```sh
-CREATE - 'POST /card/request' - RESQUEST A NEW CREDIT CARD (CREDIT CARD ONLY)
+'POST /request' - REQUEST A NEW CREDIT CARD (CREDIT CARD ONLY)
 ```
 ```sh
-UPDATE - 'POST /card/replace' - REPLACE A CARD (DAMAGED OR STOLEN: UPDATE TO DISACTIVATED STATUS)
+'POST /replace' - REPLACE A CARD (DAMAGED OR STOLEN: UPDATE TO DISACTIVATED STATUS)
 ```
 ```sh
-UPDATE - 'POST /card/lock' - LOCK AND UNLOCK A CARD
+'POST /lock' - LOCK AND UNLOCK A CARD
 ```
 **Microservices:**
 - **card-service** 
