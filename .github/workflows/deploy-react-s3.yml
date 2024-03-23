@@ -1,4 +1,4 @@
-name: webpack
+name: deploy-react-s3
 
 env:
   REACT_APP_API_GATEWAY_STAGE: ${{ secrets.API_GATEWAY_STAGE }}
