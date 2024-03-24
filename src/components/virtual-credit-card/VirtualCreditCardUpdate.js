@@ -6,24 +6,21 @@ import API from './api';
 
 export default class VirtualCreditCardUpdate extends Component {
   state = {
-    id: '',
-    cvv: ''
+    id: ''
   }
 
   handleChange = event => {
     this.setState({ id: event.target.value });
-    this.setState({ cvv: event.target.value });
   }
 
   handleSubmit = event => {
     event.preventDefault();
 
     const card = {
-      id: this.state.id,
-      cvv: this.state.cvv
+      id: this.state.id
     };
 
-    API.put(`virtual-credit-cards/${this.state.id}`, { card })
+    API.post(`/lock`, { card })
       .then(res => {
         this.props.updateMessage(res.data.message)
       })
@@ -36,10 +33,8 @@ export default class VirtualCreditCardUpdate extends Component {
           <label>
             Card Id:
             <input type="text" name="card-id" onChange={this.handleChange} />
-            Card new CVV:
-            <input type="text" name="card-cvv" onChange={this.handleChange} />
           </label>
-          <button type="submit">Update</button>
+          <button type="submit">Lock</button>
         </form>
       </div>
     )

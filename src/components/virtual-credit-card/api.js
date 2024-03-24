@@ -1,8 +1,9 @@
 import axios from 'axios';
+import {
+  CARD_API_ENDPOINT_URL
+} from '../../investments/action/action-const';
 
-const apiStage = process.env.REACT_APP_API_GATEWAY_STAGE;
-const apiEndpoint = process.env.REACT_APP_API_GATEWAY_ENDPOINT;
 
 export default axios.create({
-  baseURL: `${apiEndpoint}/${apiStage}/`
+  baseURL: `${CARD_API_ENDPOINT_URL}`
 });
