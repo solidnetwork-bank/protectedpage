@@ -33,7 +33,7 @@ export default function Search() {
       id: selectedStatement
     };
 
-    axios.post(`${ACCOUNT_API_ENDPOINT_URL}`, { statement })
+    axios.post(`${ACCOUNT_API_ENDPOINT_URL}/transaction`, { statement })
       .then(res => {
         processResponse(res);
       })
