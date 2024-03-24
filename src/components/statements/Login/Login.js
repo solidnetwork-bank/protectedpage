@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../../../static/styles/login.css';
-import API from '../../virtual-credit-card/api.js';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import {
     STATEMENT_PATH
 } from '../../../model/store-const.js';
+import {
+    API_LOGIN_PATH
+} from '../../../investments/action/action-const';
 
 
 export default function Login({ setToken }) {
@@ -19,12 +22,12 @@ export default function Login({ setToken }) {
             password: credentials.password
         };
 
-   
 
-        API.post(`auth/signin`, { user })
+
+        axios.post(`${API_LOGIN_PATH}`, { user })
             .then(res => {
-             
-                setToken( res.data.token)
+
+                setToken(res.data.token)
             })
 
 
@@ -33,13 +36,13 @@ export default function Login({ setToken }) {
 
     const handleLoginSubmit = async e => {
         e.preventDefault();
-       await LoginUser({
+        await LoginUser({
             username,
             password
         });
-       
 
-  
+
+
         navigate({ STATEMENT_PATH }); // Redirect to the statement search
     }
 

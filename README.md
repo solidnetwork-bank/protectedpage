@@ -40,26 +40,181 @@ npm test
 npm install axios
 ```
 
-### API and Microservices
+### Hosts, APIs and Microservices
 
-### Virtual Credit Cards:
+### Homepage Site (Frontend)
+**Host**:
+```sh
+bank.solidnetwork.xyz
+```
 
-- **list-virtual-credit-cards-service:** read-only microservice
+### Protected Site (Frontend)
+**Host**:
+```sh
+online.solidnetwork.xyz
+```
 
+### Sign Up. Sign In. Log Out. Forgot username. Forgot password .Profile .Settings.
+**Host**:
 ```sh
-LIST - 'GET /virtual-credit-cards' - LIST ALL CREDIT CARDS (ACTIVATED STATUS, LAST 4 DIGITS)
+secure.solidnetwork.xyz
+```
+**Rest Api**:
+- **Secure Rest Api**
+- **Methods**:
+```sh
+'POST /auth/signin' - Sing In (GENERATE JWT TOKEN)
 ```
 ```sh
-READ - 'GET /virtual-credit-cards/{id}' - READ A CREDIT CARD (DISPLAY ALL INFORMATION OF A CREDIT CARD)
+'POST /auth/singup' - Sing Up
 ```
-- **manage-virtual-credit-cards-service:** connected to a third party service
+```sh
+'POST /auth/logout' - Log Out
+```
+```sh
+'POST /profile' - READ PROFILE INFORMATION
+```
+```sh
+'POST /settings' - Settings
+```
+**Microservices:**
+- **secure-service:** 
 
+### Transfers.
+**Host**:
 ```sh
-CREATE - 'POST /virtual-credit-cards' - ADD VIRTUAL CREDIT CARD (ASK FOR A NEW CREDIT CARD TO BE CREATED: 3RD PARTY SERVICES)
+transfer.solidnetwork.xyz
+```
+**Rest Api**:
+- **Transfer Rest Api**
+- **Methods**:
+```sh
+'POST /' - LIST ALL TRANSFERS
 ```
 ```sh
-UPDATE - 'PUT /virtual-credit-cards/{id}' - UPDATE A CREDIT CARD (UPDATE DYNAMIC CVV)
+'POST /self' - BETWEEN MY ACCOUNTS
 ```
 ```sh
-DELETE - 'DELETE /virtual-credit-cards/{id}' - REMOVE A CREDIT CARD (UPDATE TO DISACTIVATED STATUS)
+'POST /wallet' - ZELLE
 ```
+```sh
+'POST /wire' - INTERNATIONAL
+```
+**Microservices:**
+- **transfer-service:** 
+
+### Payments.
+**Host**:
+```sh
+payment.solidnetwork.xyz
+```
+**Rest Api**:
+- **Payment Rest Api**
+- **Methods**:
+```sh
+'POST /' - LIST ALL PAYMENTS
+```
+```sh
+'POST /bill' - Pay Bills
+```
+**Microservices:**
+- **payment-service:** 
+
+### Investment. CD.
+**Host**:
+```sh
+investment.solidnetwork.xyz
+```
+**Rest Api**:
+- **Investment Rest Api**
+- **Methods**:
+```sh
+'POST /' - LIST ALL INVESTMENTS
+```
+```sh
+'POST /cd' - Certificate of Deposit
+```
+**Microservices:**
+- **investment-service:** 
+
+### Loans.
+**Host**:
+```sh
+loan.solidnetwork.xyz
+```
+**Rest Api**:
+- **Loan Rest Api**
+- **Methods**:
+```sh
+'POST /' - LIST ALL LOANS
+```
+```sh
+'POST /home' - Mortgage
+```
+```sh
+'POST /auto' - Car Loans
+```
+**Microservices:**
+- **loan-service:** 
+
+### Statements. Documents.
+**Host**:
+```sh
+statement.solidnetwork.xyz
+```
+**Rest Api**:
+- **Statement Rest Api**
+- **Methods**:
+```sh
+'POST /' - LIST ALL STATEMENTS
+```
+```sh
+'POST /generate' - (GENERATE PDF STATEMENT)
+```
+**Microservices:**
+- **statement-service:** 
+### Accounts. Joint Account. Savings Account. Checking Account.
+**Host**:
+```sh
+account.solidnetwork.xyz
+```
+**Rest Api**:
+- **Account Rest Api**
+- **Methods**:
+```sh
+'POST /' - (LIST ALL ACCOUNTS)
+```
+```sh
+'POST /transaction' - (READ ACCOUNT TRANSACTIONS)
+```
+```sh
+'POST /transaction/detail' - (READ TRANSACTION DETAIL)
+```
+**Microservices:**
+- **account-service:** 
+
+### Cards. Debit Cards. Credit Cards.
+**Host**:
+```sh
+card.solidnetwork.xyz
+```
+**Rest Api**:
+- **Card Rest Api**
+- **Methods**:
+```sh
+'POST /' - LIST ALL CARDS (ACTIVATED STATUS, LAST 4 DIGITS)
+```
+```sh
+'POST /detail' - READ A CARD (CARD DETAIL)
+```
+```sh
+'POST /request' - REQUEST A NEW CREDIT CARD (CREDIT CARD ONLY)
+```
+```sh
+'POST /replace' - REPLACE A CARD (DAMAGED OR STOLEN: UPDATE TO DISACTIVATED STATUS)
+```
+```sh
+'POST /lock' - LOCK AND UNLOCK A CARD
+```
+**Microservices:**
+- **card-service** 

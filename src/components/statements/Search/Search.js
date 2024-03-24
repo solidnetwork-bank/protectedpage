@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import API from '../../virtual-credit-card/api.js';
 import { dataStatement } from '../../../model/statements'
-
+import axios from 'axios';
+import {
+  ACCOUNT_API_ENDPOINT_URL
+} from '../../../investments/action/action-const';
 
 export default function Search() {
   const [statementDetail, setStatementDetail] = useState({
@@ -31,7 +33,7 @@ export default function Search() {
       id: selectedStatement
     };
 
-    API.post(`statement`, { statement })
+    axios.post(`${ACCOUNT_API_ENDPOINT_URL}/transaction`, { statement })
       .then(res => {
         processResponse(res);
       })

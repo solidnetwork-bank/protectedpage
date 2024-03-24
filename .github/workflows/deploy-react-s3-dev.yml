@@ -1,14 +1,8 @@
-name: webpack
-
-env:
-  REACT_APP_API_GATEWAY_STAGE: ${{ secrets.API_GATEWAY_STAGE }}
-  REACT_APP_API_GATEWAY_ENDPOINT: ${{ secrets.API_GATEWAY_ENDPOINT }}
+name: deploy-react-s3-dev
 
 on:
   push:
-    branches: [ "dev" ]
-  pull_request:
-    branches: [ "dev" ]
+    tags:
   workflow_dispatch:
 
 jobs:
@@ -27,7 +21,7 @@ jobs:
       run: |
         npm install
         npm ci
-        npm run build
+        npm run build:dev
         
     - name: Upload to S3
       uses: jakejarvis/s3-sync-action@master
