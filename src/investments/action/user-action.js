@@ -13,6 +13,10 @@ import {
   USER_IMAGE_PATH
 } from './action-const';
 
+import {
+  HOMEPAGE_ENDPOINT
+} from '../../components/components-const';
+
 export const setUserEmail = (email) => {
   return {
     type: SET_USER_EMAIL,
@@ -56,7 +60,8 @@ export const logout = (state) => {
     localStorage.removeItem(AUTH_TOKEN_LOCAL_NAME);
     setAuthToken(false);
     dispatch(setUser({}));
-    state.navigate(/*LOGIN_NAV_PATH*/ "/");
+    console.log("logout navegating out");
+    window.location.replace(HOMEPAGE_ENDPOINT);
   }
 }
 
@@ -88,7 +93,7 @@ export const goHome = (state) => {
   return dispatch => {
     console.log("goHome=", state);
     if (state.user.auth) {
-      state.navigate(RENTAL_NAV_PATH+"investment/roi");
+      state.navigate(RENTAL_NAV_PATH + "roi");
     }
   };
 }
@@ -97,7 +102,7 @@ export const requiredAuth = (state) => {
   return dispatch => {
     console.log("requiredAuth=", state);
     if (!state.user.auth) {
-      state.navigate("/"+LOGIN_NAV_PATH);
+      state.navigate("/" + LOGIN_NAV_PATH);
     }
   };
 }

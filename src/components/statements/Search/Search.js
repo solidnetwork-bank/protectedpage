@@ -124,12 +124,12 @@ export default function Search() {
           <button type="submit">Find</button>
         </div>
       </form>
-      <h3>Statement</h3>
+      <h3>Transactions</h3>
       <p>Account # {statementDetail.account}</p>
       <table Style={"border-collapse: collapse;"}>
         <tbody>
           <tr>
-            <td colSpan={3} Style={"font-weight: bold;"}>Deposit and other additions</td>
+            <td colSpan={3} ><b>Deposit and other additions</b></td>
           </tr>
           <tr Style={"border-bottom: solid 1px black;"}>
             <td>Date</td>
@@ -146,7 +146,7 @@ export default function Search() {
             )
           }
           <tr>
-            <td colSpan={3} Style={"font-weight: bold;"}>Withdrawals and other subtractions</td>
+            <td colSpan={3}> <b>Withdrawals and other subtractions</b></td>
           </tr>
           <tr Style={"border-bottom: solid 1px black;"}>
             <td>Date</td>
@@ -163,7 +163,7 @@ export default function Search() {
             )
           }
           <tr>
-            <td colSpan={3} Style={"font-weight: bold;"}>Service fees</td>
+            <td colSpan={3}><b>Service fees</b></td>
           </tr>
           <tr Style={"border-bottom: solid 1px black;"}>
             <td>Date</td>
@@ -179,9 +179,6 @@ export default function Search() {
               </tr>
             )
           }
-
-
-
         </tbody>
       </table>
     </div>
