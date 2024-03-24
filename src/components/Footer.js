@@ -6,6 +6,9 @@ import '../static/styles/footer.css';
 import FooterOption from './FooterOption';
 import Logo from '../static/images/logo.png';
 import storeNoRedux from '../model/store-no-redux';
+import {
+    HOMEPAGE_ENDPOINT
+} from './components-const';
 
 
 export default class Footer extends Component {
@@ -24,7 +27,7 @@ export default class Footer extends Component {
                 <a
                     className='logo-anchor'
                     rel='noreferrer'
-                    href="https://bank.solidnetwork.xyz/"
+                    href={HOMEPAGE_ENDPOINT}
                     target="_blank">
                     <img alt="The Solid Network Bank" className="logo-image" src={Logo} />
                 </a>
@@ -60,21 +63,21 @@ function getOpt(idx, href, name) {
 const opts = [];
 opts.push(
     getOpt(1,
-        "https://bank.solidnetwork.xyz/",
+        HOMEPAGE_ENDPOINT,
         "icon-social_twitter"
     )
 );
 
 opts.push(
     getOpt(2,
-        "https://bank.solidnetwork.xyz/",
+        HOMEPAGE_ENDPOINT,
         "icon-social_instagram"
     )
 );
 
 opts.push(
     getOpt(3,
-        "https://bank.solidnetwork.xyz/",
+        HOMEPAGE_ENDPOINT,
         "icon-social_tiktok"
     )
 );
@@ -82,7 +85,7 @@ opts.push(
 
 opts.push(
     getOpt(4,
-        "https://bank.solidnetwork.xyz/",
+        HOMEPAGE_ENDPOINT,
         "icon-social_facebook"
     )
 );
@@ -90,7 +93,7 @@ opts.push(
 
 opts.push(
     getOpt(5,
-        "https://bank.solidnetwork.xyz/",
+        HOMEPAGE_ENDPOINT,
         "icon-social_youtube"
     )
 );
@@ -101,5 +104,3 @@ const results = opts.map((opt) =>
         key={opt.idx}
         opt={opt} />
 );
-
-

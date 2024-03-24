@@ -1,4 +1,7 @@
 import OnePic from '../static/images/one-image.png';
+import {
+    HOMEPAGE_ENDPOINT
+} from '../components/components-const';
 
 function getNews() {
     const dataRows = [];
@@ -6,10 +9,10 @@ function getNews() {
         getRow(
             1,
             "Name Last One",
-            "https://bank.solidnetwork.xyz",
+            HOMEPAGE_ENDPOINT,
             "Name Last One",
             OnePic,
-            "https://bank.solidnetwork.xyz",
+            HOMEPAGE_ENDPOINT,
             "Title One words words words.",
             true,
             "March 14th 2024"
@@ -20,10 +23,10 @@ function getNews() {
         getRow(
             2,
             "Name Last Two",
-            "https://bank.solidnetwork.xyz",
+            HOMEPAGE_ENDPOINT,
             "Name Last Two",
             OnePic,
-            "https://bank.solidnetwork.xyz",
+            HOMEPAGE_ENDPOINT,
             "Title Two words words words.",
             false,
             "March 15th 2024"
@@ -34,10 +37,10 @@ function getNews() {
         getRow(
             3,
             "Name Last Three",
-            "https://bank.solidnetwork.xyz",
+            HOMEPAGE_ENDPOINT,
             "Name Last Three",
             OnePic,
-            "https://bank.solidnetwork.xyz",
+            HOMEPAGE_ENDPOINT,
             "Title Three words words words.",
             false,
             "March 16th 2024"
@@ -48,10 +51,10 @@ function getNews() {
         getRow(
             4,
             "Name Last Four",
-            "https://bank.solidnetwork.xyz",
+            HOMEPAGE_ENDPOINT,
             "Name Last Four",
             OnePic,
-            "https://bank.solidnetwork.xyz",
+            HOMEPAGE_ENDPOINT,
             "Title Four words words words.",
             false,
             "March 17th 2024"
@@ -62,10 +65,10 @@ function getNews() {
         getRow(
             5,
             "Name Last Five",
-            "https://bank.solidnetwork.xyz",
+            HOMEPAGE_ENDPOINT,
             "Name Last Five",
             OnePic,
-            "https://bank.solidnetwork.xyz",
+            HOMEPAGE_ENDPOINT,
             "Title Five words words words.",
             false,
             "March 18th 2024"

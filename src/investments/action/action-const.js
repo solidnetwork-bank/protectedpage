@@ -1,16 +1,21 @@
 /* API GATEWAY */
-export const API_GATEWAY_ENDPOINT = process.env.REACT_APP_API_GATEWAY_ENDPOINT;
-export const API_GATEWAY_STAGE = process.env.REACT_APP_API_GATEWAY_STAGE;
-export const API_ROOT_PATH = `${API_GATEWAY_ENDPOINT}/${API_GATEWAY_STAGE}`;
+const API_STAGE = process.env.REACT_APP_API_STAGE;
+const SECURE_API_ENDPOINT = process.env.REACT_APP_SECURE_API_ENDPOINT;
+const ACCOUNT_API_ENDPOINT = process.env.REACT_APP_ACCOUNT_API_ENDPOINT;
+const CARD_API_ENDPOINT = process.env.REACT_APP_CARD_API_ENDPOINT;
+
+const SECURE_API_ENDPOINT_URL = `${API_STAGE}/${SECURE_API_ENDPOINT}`;
+export const ACCOUNT_API_ENDPOINT_URL = `${API_STAGE}/${ACCOUNT_API_ENDPOINT}`;
+export const CARD_API_ENDPOINT_URL = `${API_STAGE}/${CARD_API_ENDPOINT}`;
 
 /* USER */
 export const AUTH_TOKEN_LOCAL_NAME = '__vrfeqFpHOe__';
 export const AUTH_HEADER = 'Authorization';
-export const API_LOGIN_PATH = `${API_ROOT_PATH}/auth/signin`;
+export const API_LOGIN_PATH = `${SECURE_API_ENDPOINT_URL}/auth/signin`;
 export const SET_USER_EMAIL = 'SET_USER_EMAIL';
 export const SET_USER_PASSWORD = 'SET_USER_PASSWORD';
 export const SET_USER = 'SET_USER';
-export const USER_IMAGE_PATH = `${API_ROOT_PATH}/profile`;
+export const USER_IMAGE_PATH = `${SECURE_API_ENDPOINT_URL}/profile`;
 export const SET_USER_IMAGE = 'SET_USER_IMAGE';
 
 /* NAV PATH */

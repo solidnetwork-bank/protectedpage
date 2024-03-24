@@ -105,7 +105,7 @@ export const requiredAuth = (state) => {
 export const getUserImage = (state) => {
   return dispatch => {
     console.log("getUserImage=", getUserImage);
-    return axios.get(USER_IMAGE_PATH)
+    return axios.post(USER_IMAGE_PATH)
       .then(
         (res) => {
           dispatch(setUserImage(res.data.image));
