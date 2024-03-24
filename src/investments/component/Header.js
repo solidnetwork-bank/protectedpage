@@ -15,19 +15,19 @@ export default function Header(props) {
     let headerTitle;
     let iconClass;
     switch (pathname) {
-      case "/investment/roi":
+      case "/roi":
         headerTitle = "ROI";
         iconClass = "rental-icon active";
         break;
-      case "/investment/search":
+      case "/search":
         headerTitle = "Search";
         iconClass = "search-icon active";
         break;
-      case "/investment/invest":
+      case "/invest":
         headerTitle = "Investment";
         iconClass = "invest-icon active";
         break;
-      case "/investment/settings":
+      case "/settings":
         headerTitle = "Settings";
         iconClass = "settings-icon active";
         break;
@@ -54,7 +54,7 @@ export default function Header(props) {
         {
           (() => {
 
-            if ("/investment/search" === pathname) {
+            if ("/search" === pathname) {
               return (
                 <form className="header-search-form">
                   <input type="text" maxLength="24" size="24" placeholder={label} />
