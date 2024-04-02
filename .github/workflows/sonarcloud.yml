@@ -16,6 +16,11 @@ jobs:
         run: |
           echo ${{ github.event.repository.name }}
 
+      - name: Install dependencies
+        run: yarn
+      - name: Test and coverage
+        run: yarn jest --coverage
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
@@ -25,3 +30,9 @@ jobs:
           args: >
             -Dsonar.organization=solidnetwork-bank
             -Dsonar.projectKey=solidnetwork-bank_${{ github.event.repository.name }}
+            -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
+            -Dsonar.sources=src
+            -Dsonar.exclusions=**/test/*.js
+            -Dsonar.language=js
+            -Dsonar.tests=./src/test
+            -Dsonar.testExecutionReportPaths=./test-report.xml

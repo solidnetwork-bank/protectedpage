@@ -9,6 +9,8 @@
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
     "env-cmd": "^10.1.0",
+    "jest": "^27.5.1",
+    "jest-sonar-reporter": "^2.0.0",
     "jquery": "^3.7.1",
     "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
@@ -25,7 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --coverage",
     "eject": "react-scripts eject",
     "build:dev": "env-cmd -f .env.development npm run-script build"
   },
@@ -49,5 +51,14 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "testResultsProcessor": "jest-sonar-reporter",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/src/test/"
+    ]
   }
 }

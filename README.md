@@ -31,7 +31,7 @@ npm run build
 ### Starts the test runner.
 
 ```sh
-npm test
+npm run test
 ```
 
 ## Make React API Calls
