@@ -3,6 +3,7 @@ name: deploy-react-s3-dev
 on:
   push:
     tags:
+      - "*"
   workflow_dispatch:
 
 jobs:
@@ -10,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Use Node.js 18
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
     - name: Build
       run: |

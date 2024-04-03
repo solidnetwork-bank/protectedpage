@@ -1,14 +1,7 @@
-# protectedpage
-The Solid Network Bank ProtectedPage
+# homepage
+The Solid Network Bank Protected Page
 
 ## Create React App
-
-### Quick Overview
-```sh
-npx create-react-app my-app
-cd my-app
-npm start
-```
 
 ### To create a new app.
 
@@ -22,10 +15,10 @@ npm start
 npm start
 ```
 
-### Bundles the app into static files for production.
+### Bundles the app into static files for dev.
 
 ```sh
-npm run build
+npm run build:dev
 ```
 
 ### Starts the test runner.
@@ -40,4 +33,4 @@ npm run test
 npm install axios
 ```
 
-### [Hosts, APIs and Microservices](https://github.com/solidnetwork-bank/IaC)
+### [Hosts & APIs](https://github.com/solidnetwork-bank/IaC)

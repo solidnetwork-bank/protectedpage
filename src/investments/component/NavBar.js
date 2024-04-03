@@ -72,6 +72,16 @@ function NavBar(props) {
             </Link>
           </div>
           <div className="col">
+            <Link onClick={onClick} to="page3">
+              <div>credit card</div>
+            </Link>
+          </div>
+          <div className="col">
+            <Link onClick={onClick} to="page4">
+              <div>transactions</div>
+            </Link>
+          </div>
+          <div className="col">
             <Link onClick={logout} to={LOGOUT_NAV_PATH}>
               <div className="exit-icon"></div>
             </Link>

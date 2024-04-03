@@ -1,20 +1,10 @@
 import {
-  React,
-  useState
+  React
 } from 'react';
-import '../static/styles/statements.css';
-import Login from '../components/statements/Login/Login';
 import Search from '../components/statements/Search/Search';
+import '../static/styles/statements.css';
 
-function Statement({heading}) {
-  const [token, setToken] = useState();
-
-
-  if (!token) {
-
-    return <Login setToken={setToken} />
-  }
-
+function Statement({ heading }) {
 
   return (
     <div>
