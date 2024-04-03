@@ -18,20 +18,19 @@ jobs:
         with:
           node-version: 18
 
-    - name: Build
-      run: |
-        npm install
-        npm ci
-        npm run build:dev
-        
-    - name: Upload to S3
-      uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --acl public-read --delete
-      env:
-        SOURCE_DIR: ./build
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_PROTECTEDPAGE_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CD_ACCESS_KEY }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CD_ACCESS_SECRET_KEY }}
-        AWS_REGION: ${{ secrets.AWS_REGION }}
-        
+      - name: Build
+        run: |
+          npm install
+          npm ci
+          npm run build:dev
+
+      - name: Upload to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --delete
+        env:
+          SOURCE_DIR: ./build
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_PROTECTEDPAGE_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CD_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CD_ACCESS_SECRET_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
