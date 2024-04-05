@@ -12,7 +12,7 @@ The Solid Network Bank Protected Page
 ### Starts the development server.
 
  ```sh   
-npm start
+npm run start:dev
 ```
 
 ### Bundles the app into static files for dev.
