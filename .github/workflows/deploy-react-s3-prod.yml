@@ -1,4 +1,4 @@
-name: deploy-react-s3-dev
+name: deploy-react-s3-prod
 
 on:
   workflow_dispatch:
