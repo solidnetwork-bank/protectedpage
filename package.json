@@ -29,7 +29,8 @@
     "build": "react-scripts build",
     "test": "jest --coverage",
     "eject": "react-scripts eject",
-    "build:dev": "env-cmd -f .env.development npm run-script build"
+    "build:dev": "env-cmd -f .env.development npm run-script build",
+    "build:prod": "env-cmd -f .env.production npm run-script build"
   },
   "eslintConfig": {
     "extends": [
