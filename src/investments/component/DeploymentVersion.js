@@ -9,18 +9,18 @@ export default class DeploymentVersion extends Component {
   render() {
     return (
       <div>
-        <h1>
+        <p Style="text-align: right; font-size: 10px; font-weight: bold;">
 
           {
             (() => {
 
               if (API_STAGE === "V0") {
                 return (
-                  <span>Development Environment: REST API Geteway Mock mode.</span>
+                 "REST API Gateway Mock mode."
                 );
               } else {
                 return (
-                  <span>Production Environment: REST API Geteway Beanstalk mode.</span>
+                 "REST API Gateway Beanstalk mode."
                 );
               }
 
@@ -28,7 +28,7 @@ export default class DeploymentVersion extends Component {
 
           }
 
-        </h1>
+        </p>
       </div>
     );
   }
