@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import NavBar from '../container/nav-bar-container';
 import store from '../reducer/store-reducer';
+import DeploymentVersion from '../component/DeploymentVersion';
 
 export const withNavigation = (Component) => {
   return props => <Component {...props} navigate={useNavigate()} />;
@@ -13,7 +14,7 @@ export const withNavigation = (Component) => {
 function RequireAuthFunct(props) {
 
   useEffect(() => {
-    console.log("store.getState().user=",store.getState().user);
+    console.log("store.getState().user=", store.getState().user);
     console.log("RequireAuthFunct=", props);
 
     props.requiredAuth(props);
@@ -21,6 +22,7 @@ function RequireAuthFunct(props) {
 
   return (
     <>
+      <DeploymentVersion />
       <Outlet />
       <NavBar />
     </>
