@@ -22,7 +22,7 @@ export default class VirtualCreditCardUpdate extends Component {
 
     API.post(`/lock`, { card })
       .then(res => {
-        this.props.updateMessage(res.data.message)
+        this.props.updateMessage(res.data.data.message)
       })
   }
 

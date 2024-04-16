@@ -22,7 +22,7 @@ export default class VirtualCreditCardRemove extends Component {
 
     API.post(`/replace`, { card })
       .then(res => {
-        this.props.updateMessage(res.data.message)
+        this.props.updateMessage(res.data.data.message)
       })
   }
 

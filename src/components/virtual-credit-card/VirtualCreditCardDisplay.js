@@ -23,7 +23,7 @@ export default class VirtualCreditCardDisplay extends Component {
 
     API.post(`/detail`, { card })
       .then(res => {
-        const card = res.data;
+        const card = res.data.data;
         this.setState({ card });
       })
   }

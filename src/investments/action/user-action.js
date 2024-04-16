@@ -74,7 +74,8 @@ export const login = (state) => {
     return axios.post(API_LOGIN_PATH, user)
       .then(
         (res) => {
-          const token = res.data.token;
+          console.log(res);
+          const token = res.data.data.token;
           localStorage.setItem(AUTH_TOKEN_LOCAL_NAME, token);
           setAuthToken(token);
           let userDecode = jwtDecode(token).user;
@@ -82,6 +83,7 @@ export const login = (state) => {
           dispatch(setUser(userDecode));
         },
         (err) => {
+          console.log(err);
           localStorage.removeItem(AUTH_TOKEN_LOCAL_NAME);
           setAuthToken(false);
         }
@@ -113,10 +115,11 @@ export const getUserImage = (state) => {
     return axios.post(USER_IMAGE_PATH)
       .then(
         (res) => {
-          dispatch(setUserImage(res.data.image));
+          dispatch(setUserImage(res.data.data.image));
         },
         (err) => {
           if (err.response.data.message === '101') {
+            /* please change this, res.data.error */
             dispatch(logout(state));
           }
         }

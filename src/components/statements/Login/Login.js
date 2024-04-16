@@ -27,7 +27,7 @@ export default function Login({ setToken }) {
         axios.post(`${API_LOGIN_PATH}`, { user })
             .then(res => {
 
-                setToken(res.data.token)
+                setToken(res.data.data.token)
             })
 
 

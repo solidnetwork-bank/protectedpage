@@ -25,7 +25,7 @@ export default class VirtualCreditCardAdd extends Component {
 
     API.post(`/request`, { card })
       .then(res => {
-        this.props.updateMessage(res.data.message)
+        this.props.updateMessage(res.data.data.message)
       })
   }
 

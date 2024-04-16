@@ -39,7 +39,7 @@ export default function Search() {
       })
 
     const processResponse = (response) => {
-      setStatementDetail(response.data)
+      setStatementDetail(response.data.data)
     }
   }
 
