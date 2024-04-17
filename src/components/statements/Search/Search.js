@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { dataStatement } from '../../../model/statements'
 import axios from 'axios';
+import React, { useState } from 'react';
 import {
   ACCOUNT_API_ENDPOINT_URL
 } from '../../../investments/action/action-const';
+import { dataStatement } from '../../../model/statements';
 
 export default function Search() {
   const [statementDetail, setStatementDetail] = useState({
@@ -34,13 +34,13 @@ export default function Search() {
     };
 
     axios.post(`${ACCOUNT_API_ENDPOINT_URL}/transaction`, { statement })
-      .then(res => {
-        processResponse(res);
-      })
+      .then(response => {
+        const data = response.data;
+        console.log(data);
+        setStatementDetail(data);
+      });
 
-    const processResponse = (response) => {
-      setStatementDetail(response.data.data)
-    }
+
   }
 
 

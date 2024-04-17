@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import '../../../static/styles/login.css';
 import axios from 'axios';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-    STATEMENT_PATH
-} from '../../../model/store-const.js';
 import {
     API_LOGIN_PATH
 } from '../../../investments/action/action-const';
+import {
+    STATEMENT_PATH
+} from '../../../model/store-const.js';
+import '../../../static/styles/login.css';
 
 
 export default function Login({ setToken }) {
@@ -25,10 +25,11 @@ export default function Login({ setToken }) {
 
 
         axios.post(`${API_LOGIN_PATH}`, { user })
-            .then(res => {
-
-                setToken(res.data.data.token)
-            })
+            .then(response => {
+                const data = response.data;
+                console.log(data);
+                setToken(data.token)
+            });
 
 
     }

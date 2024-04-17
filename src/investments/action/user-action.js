@@ -73,17 +73,18 @@ export const login = (state) => {
   return dispatch => {
     return axios.post(API_LOGIN_PATH, user)
       .then(
-        (res) => {
-          console.log(res);
-          const token = res.data.data.token;
+        (response) => {
+          const data = response.data;
+          console.log(data);
+          const token = data.token;
           localStorage.setItem(AUTH_TOKEN_LOCAL_NAME, token);
           setAuthToken(token);
-          let userDecode = jwtDecode(token).user;
+          const userDecode = jwtDecode(token).user;
           console.log("userDecode=", userDecode);
           dispatch(setUser(userDecode));
         },
-        (err) => {
-          console.log(err);
+        (error) => {
+          console.log(error.toJSON());
           localStorage.removeItem(AUTH_TOKEN_LOCAL_NAME);
           setAuthToken(false);
         }
@@ -114,14 +115,17 @@ export const getUserImage = (state) => {
     console.log("getUserImage=", getUserImage);
     return axios.post(USER_IMAGE_PATH)
       .then(
-        (res) => {
-          dispatch(setUserImage(res.data.data.image));
+        (response) => {
+          const data = response.data;
+          console.log(data);
+          dispatch(setUserImage(data.image));
         },
-        (err) => {
-          if (err.response.data.message === '101') {
-            /* please change this, res.data.error */
-            dispatch(logout(state));
-          }
+        (error) => {
+          console.log(error.toJSON());
+          /* if (err.response.data.message === '101') {
+             //please change this, res.data.error 
+             dispatch(logout(state));
+           }*/
         }
       );
   };

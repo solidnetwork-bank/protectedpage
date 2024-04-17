@@ -1,6 +1,6 @@
 import {
-  React,
-  Component
+  Component,
+  React
 } from 'react';
 import API from './api';
 
@@ -21,9 +21,11 @@ export default class VirtualCreditCardUpdate extends Component {
     };
 
     API.post(`/lock`, { card })
-      .then(res => {
-        this.props.updateMessage(res.data.data.message)
-      })
+      .then(response => {
+        const data = response.data;
+        console.log(data);
+        this.props.updateMessage(data.message)
+      });
   }
 
   render() {

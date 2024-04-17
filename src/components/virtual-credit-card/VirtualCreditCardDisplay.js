@@ -1,6 +1,6 @@
 import {
-  React,
-  Component
+  Component,
+  React
 } from 'react';
 import API from './api';
 
@@ -22,10 +22,11 @@ export default class VirtualCreditCardDisplay extends Component {
     };
 
     API.post(`/detail`, { card })
-      .then(res => {
-        const card = res.data.data;
-        this.setState({ card });
-      })
+      .then(response => {
+        const data = response.data;
+        console.log(data);
+        this.setState({ data });
+      });
   }
 
 
