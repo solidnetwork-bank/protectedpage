@@ -25,7 +25,7 @@ export default class VirtualCreditCardDisplay extends Component {
       .then(response => {
         const data = response.data;
         console.log(data);
-        this.setState({ data });
+        this.setState({ card: data });
       });
   }
 

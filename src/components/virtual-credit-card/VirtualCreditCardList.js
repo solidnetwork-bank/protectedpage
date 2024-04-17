@@ -25,7 +25,7 @@ export default class VirtualCreditCardList extends Component {
         {
           this.state.cards
             .map(card =>
-              <li key={card.id}>{card.lastDigits}</li>
+              <li key={card.number}>{card.lastDigits}</li>
             )
         }
       </ul>
