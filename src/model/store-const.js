@@ -10,6 +10,7 @@ export const PROPOSAL_HEADING = 'Another Top Heading';
 export const EDITORIAL_HEADING = 'Another very top Heading';
 export const VIRTUAL_CREDIT_CARD_HEADING = 'Virtual Credit Card';
 export const STATEMENT_HEADING = 'Statements and Documents';
+export const TRANSFER_HEADING = 'Transfer';
 
 /* PATHS */
 
@@ -19,3 +20,4 @@ export const EDITORIAL_PATH = "page2";
 export const VIRTUAL_CREDIT_CARD_PATH = "page3";
 export const STATEMENT_PATH = "page4";
 export const ALL_PATH = "*";
+export const TRANSFER_PATH = "page5";
