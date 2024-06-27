@@ -1,12 +1,21 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   TRANSFER_API_ENDPOINT_URL
 } from '../../../investments/action/action-const';
+import '../../../static/styles/message.css';
 
 
 export default function TransferComponent() {
 
+  const [message, setMessage] = useState({message:''});
+
+  const  updateMessage = message => {
+    setMessage((message),
+      () => setTimeout(() => setMessage({message:''}), 2000)
+    );
+
+  };
 
 
   const handleSearchSubmit = async e => {
@@ -16,6 +25,7 @@ export default function TransferComponent() {
       .then(response => {
         const data = response.data;
         console.log(data);
+        updateMessage(data);
       });
 
 
@@ -68,6 +78,20 @@ export default function TransferComponent() {
           <button type="submit">Transfer</button>
         </div>
       </form>
+
+
+{
+  message.message==='' ?
+  ''
+  :
+  <div className="success-msg">
+                <i className="fa fa-check"></i>
+                {message.message}
+            </div>
+    
+}
+   
+            
     
 
     </div>
