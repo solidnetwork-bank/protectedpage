@@ -8,8 +8,8 @@ export const HEADER_NAME = 'SOLID NETWORK BANK';
 export const HOME_HEADING = "This a Top Heading";
 export const PROPOSAL_HEADING = 'Another Top Heading';
 export const EDITORIAL_HEADING = 'Another very top Heading';
-export const VIRTUAL_CREDIT_CARD_HEADING = 'Virtual Credit Card';
-export const STATEMENT_HEADING = 'Statements and Documents';
+export const VIRTUAL_CREDIT_CARD_HEADING = 'Credit Cards';
+export const STATEMENT_HEADING = 'Accounts';
 export const TRANSFER_HEADING = 'Transfer';
 
 /* PATHS */

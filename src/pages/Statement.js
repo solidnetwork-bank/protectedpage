@@ -1,10 +1,10 @@
 import {
   React
 } from 'react';
-import Search from '../components/statements/Search/Search';
-import '../static/styles/statements.css';
+import Search from '../components/accounts/Search/Search';
+import '../static/styles/accounts.css';
 
-function Statement({ heading }) {
+function Accounts({ heading }) {
 
   return (
     <div>
@@ -18,4 +18,4 @@ function Statement({ heading }) {
 }
 
 
-export default Statement;
+export default Accounts;

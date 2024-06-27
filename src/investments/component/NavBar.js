@@ -7,6 +7,10 @@ import {
   SETTINGS_NAV_PATH
 } from '../action/action-const';
 
+const CREDIT_CARDS_LABEL = 'Credit Cards';
+const ACCOUNTS_LABEL = 'Accounts';
+const TRANSFER_LABEL = 'Transfer';
+
 
 function NavBar(props) {
 
@@ -73,17 +77,17 @@ function NavBar(props) {
           </div>
           <div className="col">
             <Link onClick={onClick} to="page3">
-              <div>credit card</div>
+              <div>{CREDIT_CARDS_LABEL}</div>
             </Link>
           </div>
           <div className="col">
             <Link onClick={onClick} to="page4">
-              <div>transactions</div>
+              <div>{ACCOUNTS_LABEL}</div>
             </Link>
           </div>
           <div className="col">
             <Link onClick={onClick} to="page5">
-              <div>transfer</div>
+              <div>{TRANSFER_LABEL}</div>
             </Link>
           </div>
           <div className="col">
